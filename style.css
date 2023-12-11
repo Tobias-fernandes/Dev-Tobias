@@ -290,3 +290,9 @@ footer > div {
     }
 
 }
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
