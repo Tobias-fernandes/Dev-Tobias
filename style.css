@@ -49,6 +49,7 @@ header {
     padding: .8rem;
     background-color: var(--dark6);
     min-height: 50px;
+    width: 100%;
 }
 
 .box-img-header {
@@ -267,6 +268,10 @@ footer > div {
 }
 
 @media screen and (max-width: 900px) {
+
+    .box-img-header img {
+        width: 100%;
+    }
 
     nav, .box-btn-actions {
         display: none;
