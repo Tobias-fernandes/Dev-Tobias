@@ -308,7 +308,7 @@ footer > div {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: #3a415a5b;
+        background: #3a415ad3;
         clip-path: circle( 100px at 110% -20%);
         transition: 1s ease-out;
     
