@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
 
 * {
     padding: 0;
@@ -42,6 +44,7 @@ body {
 }
 
 header {
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -49,7 +52,6 @@ header {
     flex-wrap:  wrap;
     padding: .8rem;
     background-color: var(--dark6);
-    min-height: 50px;
     width: 100%;
 }
 
@@ -68,12 +70,14 @@ nav {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav-links {
     text-decoration: none;
     color: var(--white);
     transition: 0.4s;
+    padding-block: 15px;
 }
 
 .nav-links:hover {
@@ -99,7 +103,7 @@ nav {
     background-color: transparent;
     border: 1px solid var(--white);
     color: var(--white);
-
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-action:hover {
@@ -249,50 +253,121 @@ footer > div {
     align-items: center;
 }
 
+#my-projects-list a{
+    text-decoration: none;
+    color: var(--dark1);
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff2d;
+    padding: 5px 5px;
+    border-radius: 10px;
+    transition: 0.4s;
+
+}
+
 #my-projects-list a:hover {
     color: var(--dark5);
     transition: 0.4s;
 }
 
 
-#my-projects-list a{
-    text-decoration: none;
-    color: var(--dark3);
-}
 
 .img-profile, .img-who-am-i {
     box-shadow: 1px 1px 1px 1px var(--cyan1);
 }
 
+.btn-close {
+    display: none;
+}
+
 .btn-list {
     display: none;
     cursor: pointer;
+    z-index: 1;
 }
 
-@media screen and (max-width: 900px) {
+.copyright {
+    color: #fff;
+}
 
-    html {
-        width: 100%;
+@media screen and (max-width: 1200px){
+    .first-section {
+        margin-top: 100px;
     }
+}
+
+
+@media screen and (max-width: 900px) {
 
     .box-img-header img {
         width: 100%;
     }
 
-    nav, .box-btn-actions {
-        display: none;
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #3a415a5b;
+        clip-path: circle( 100px at 110% -20%);
+        transition: 1s ease-out;
+    
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+    
+        pointer-events: none;
     }
 
+
+    
     .btn-list {
         display: flex;
         color: #fff;
         font-size: 20px;
     }
+    
+    .nav a {
+        font-size: 20px;
+        opacity: 0;
+    }
 
+
+
+    .cabecalho.active .nav {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .cabecalho.active .btn-list {
+        display: none;
+    }
+
+    .cabecalho.active .btn-close {
+        color: #fff;
+        display: block;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .cabecalho.active .btn-list {
+        pointer-events: all;  /*  OLHARRR AQUI  */
+    }
+    
+
+    .cabecalho.active .nav a {
+        opacity: 1;
+    }
 }
+
+
+
+/* Somente para deixar meu nome responsivo no celular */
 
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 3rem;
     }
+    
 }
