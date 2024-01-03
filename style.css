@@ -9,10 +9,6 @@
     scroll-behavior: smooth;
 }
 
-html {
-    width: 100%;
-}
-
 :root {
     --white: #fff;
     --dark1: #34344e;
@@ -311,6 +307,11 @@ footer > div {
 
 @media screen and (max-width: 900px) {
 
+    /* Necessário para imagem não ficar achatada no mobile */
+    .box-img-header img {
+        width: 100%;
+    }
+    
     nav {
         position: fixed;
         top: 0;
