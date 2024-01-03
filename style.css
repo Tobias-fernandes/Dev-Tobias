@@ -9,6 +9,10 @@
     scroll-behavior: smooth;
 }
 
+html {
+    width: 100%;
+}
+
 :root {
     --white: #fff;
     --dark1: #34344e;
