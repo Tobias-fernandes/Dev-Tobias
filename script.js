@@ -34,7 +34,7 @@ getProjects();
 const hamburger = document.querySelector(".btn-list");
 const nav = document.querySelector(".cabecalho");
 
-hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+hamburger.addEventListener("click", () => nav.classList.add("active"));
 
 const closeHamburger = document.querySelector(".btn-close");
 const navClose = document.querySelectorAll(".nav-links");
