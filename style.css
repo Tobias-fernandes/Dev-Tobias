@@ -244,6 +244,15 @@ footer > div {
     gap: 2rem;
 }
 
+#contact a {
+    transition: 0.3s ease;
+}
+
+#contact a:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
 #my-projects-list {
     display: flex;
     gap: 2rem;
@@ -297,10 +306,6 @@ footer > div {
 
 
 @media screen and (max-width: 900px) {
-
-    .box-img-header img {
-        width: 100%;
-    }
 
     nav {
         position: fixed;

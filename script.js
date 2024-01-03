@@ -39,16 +39,10 @@ hamburger.addEventListener("click", () => nav.classList.toggle("active"));
 const closeHamburger = document.querySelector(".btn-close");
 const navClose = document.querySelectorAll(".nav-links");
 
-closeHamburger.addEventListener("click", () => {
-    // Itera sobre cada elemento com a classe .nav-links
-    navClose.forEach((link) => {
-        // Procura o ancestral .cabecalho mais próximo
-        const header = link.closest(".cabecalho");
-        
-        // Remove a classe "active" se encontrou o ancestral .cabecalho
-        if (header) {
-            header.classList.remove("active");
-        }
-    });
-});
+navClose.forEach((link) => {
+    link.addEventListener("click", () => nav.classList.remove("active"));
+})
 
+closeHamburger.addEventListener("click", () => {
+    nav.classList.remove("active");
+})
